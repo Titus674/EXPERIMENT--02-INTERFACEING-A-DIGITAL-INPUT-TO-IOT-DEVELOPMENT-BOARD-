@@ -1,11 +1,9 @@
-###  DATE: 
+###  DATE: 07-04-2025
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: TITUS RATNA KUMAR KARIVELLA
+###  ROLL NO : 212224230292
 
-
-# EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
+###  DEPARTMENT: # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
  
 
 ## Aim: To Interface a Digital Input  (IR pair ) to ARM IOT development board and write a  program to obtain  the data 
@@ -78,11 +76,34 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 ## STM 32 CUBE PROGRAM :
 
+~~~
+while (1)
+  {
+	  void IRsensor()
+	  	  {
 
+	  		  IRsensorop=HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0);
+	  		  if (IRsensorop==1)
+	  		  {
+	  			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_SET);
+	  			  HAL_Delay(500);
+	  			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET);
+	  			  HAL_Delay(500);
+	  		  }
+	  		  else
+	  				  {
+	  					  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_0,GPIO_PIN_RESET);
+	  					  HAL_Delay(500);
+	  				  }
+	  		  
+	  	  }
+  }
+~~~
 
 ## Output  :
  
- 
+ ![Screenshot 2024-09-02 181909](https://github.com/user-attachments/assets/cec3aa2a-4ea9-49aa-ad8c-9908eb7b0266)
+
  
  
 ## Result :
